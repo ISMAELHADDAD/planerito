@@ -18,7 +18,7 @@ defmodule Planerito.Events do
 
     Repo.all(
       from(e in Event,
-        where: ^beginning_of_week < e.date and e.date < ^end_of_week,
+        where: ^beginning_of_week <= e.date and e.date <= ^end_of_week,
         order_by: e.sort_order
       )
     )
