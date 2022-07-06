@@ -2,7 +2,7 @@
 
 A minimalist planner/todo app written using Elixir/Phoenix Liveview.
 
-![](./demo/planerito-demo.mp4)
+https://user-images.githubusercontent.com/34580510/177540937-d67c8b97-5410-4437-8fe4-78ed72847d17.mp4
 
 ## Setup project for development
 
