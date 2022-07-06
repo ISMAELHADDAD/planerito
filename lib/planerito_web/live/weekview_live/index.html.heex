@@ -1,0 +1,29 @@
+<div class="lg:p-6 lg:pb-12">
+  <!-- Header -->
+  <div class="shadow lg:shadow-none sticky top-0 bg-white py-4 px-6 lg:px-0 z-50 flex justify-between lg:mb-16">
+    <h1 class="text-xl lg:text-4xl font-bold"><%= Calendar.strftime(@selected_week, "%B %Y") %></h1>
+    <div class="flex">
+      <%= if Date.compare(today() |> Date.beginning_of_week(), @selected_week) != :eq do %>
+        <button phx-click="nav_week" phx-value-direction="today">Today</button>
+      <% end %>
+      <button phx-click="nav_week" phx-value-direction="prev">(prev)</button>
+      <button phx-click="nav_week" phx-value-direction="next">(next)</button>
+    </div>
+  </div>
+  <!-- Content -->
+  <div>
+    <!-- Todos -->
+    <div class="p-6 lg:p-0 lg:grid lg:grid-cols-6 lg:min-h-[462px] lg:-mx-3">
+      <TodoList.list_day date={day_of_week(@selected_week, 0)} items={filter_events_by_date(@events, day_of_week(@selected_week, 0))} />
+      <TodoList.list_day date={day_of_week(@selected_week, 1)} items={filter_events_by_date(@events, day_of_week(@selected_week, 1))} />
+      <TodoList.list_day date={day_of_week(@selected_week, 2)} items={filter_events_by_date(@events, day_of_week(@selected_week, 2))} />
+      <TodoList.list_day date={day_of_week(@selected_week, 3)} items={filter_events_by_date(@events, day_of_week(@selected_week, 3))} />
+      <TodoList.list_day date={day_of_week(@selected_week, 4)} items={filter_events_by_date(@events, day_of_week(@selected_week, 4))} />
+      <TodoList.group>
+        <TodoList.list_day date={day_of_week(@selected_week, 5)} items={filter_events_by_date(@events, day_of_week(@selected_week, 5))} />
+        <TodoList.list_day date={day_of_week(@selected_week, 6)} items={filter_events_by_date(@events, day_of_week(@selected_week, 6))} />
+      </TodoList.group>
+    </div>
+    <!-- Drafts -->
+  </div>
+</div>
