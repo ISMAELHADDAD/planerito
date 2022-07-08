@@ -94,7 +94,7 @@ defmodule PlaneritoWeb.Components.TodoList do
 
     ~H"""
     <li {@extra_assigns} class="show-check-on-hover relative list-none cursor-pointer box-border h-[42px] pr-6 border-b border-transparent hover:border-blue-400">
-      <div class="cursor-grab touch-manipulation w-full py-[10px]">
+      <div class="cursor-grab touch-manipulation w-full py-[10px]" phx-click="select_event" phx-value-id={@item.id}>
         <span class={
           Enum.join(
             [

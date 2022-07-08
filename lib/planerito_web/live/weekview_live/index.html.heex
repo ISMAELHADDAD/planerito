@@ -27,3 +27,7 @@
     <!-- Drafts -->
   </div>
 </div>
+<!-- Modal -->
+<%= if @selected_event do %>
+  <TodoForm.modal_form item={@selected_event} />
+<% end %>

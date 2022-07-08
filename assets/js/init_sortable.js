@@ -17,13 +17,14 @@ const init = (sortableList, callback) => {
     animation: 150,
     ghostClass: "opacity-0",
     dragClass: "bg-blue-400",
+    chosenClass: "bg-blue-400",
     onSort: (evt) => {
       let ids = [];
       const nodeList = sortableList.querySelectorAll("[data-sortable-id]");
       for (let i = 0; i < nodeList.length; i++) {
         const idObject = {
           id: nodeList[i].dataset.sortableId,
-          list_id: listId,
+          date: listId,
           sort_order: i,
         };
         ids.push(idObject);
