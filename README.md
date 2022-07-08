@@ -2,7 +2,7 @@
 
 A minimalist planner/todo app written using Elixir/Phoenix Liveview.
 
-https://user-images.githubusercontent.com/34580510/177540937-d67c8b97-5410-4437-8fe4-78ed72847d17.mp4
+https://user-images.githubusercontent.com/34580510/177963633-fffa15f0-53d7-4918-a4c8-1b00381e7567.mp4
 
 ## Setup project for development
 
